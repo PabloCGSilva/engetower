@@ -1,126 +1,83 @@
-# Engetower Application
+Angular Frontend Project: engetower
+Overview
 
-This project is a web application built with Angular and Spring Boot.
+This project is an Angular frontend application for managing user data. It integrates with a backend API for user CRUD operations.
+Stack Used
 
-## Stack Used
+    Angular: Frontend framework
+    Bootstrap: CSS framework for styling
 
-- **Frontend**: Angular 18.0.5
-- **Backend**: Java with Spring Boot
-- **Database**: H2 Database (in-memory)
+Functionality
 
-## Functionalities
+    Add User: Allows adding new users with a name and email.
+    List Users: Displays a list of all users fetched from the backend.
+    Delete User: Removes a user from the list and deletes it from the backend.
 
-The application allows users to:
-- Add new users with their name and email.
-- Display a list of all users fetched from the backend.
-- Delete users from the list and backend.
+How to Run
 
-## How to Run
+    Prerequisites:
+        Node.js and npm installed on your machine.
+        Angular CLI (npm install -g @angular/cli).
 
-### Prerequisites
-
-Before running the application, make sure you have the following installed:
-- Java Development Kit (JDK) 11 or higher
-- Node.js with npm (Node Package Manager)
-
-### Backend (Spring Boot)
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-Build the Spring Boot application:
-
-bash
-
-./mvnw clean install
-
-Run the application:
-
-bash
-
-    ./mvnw spring-boot:run
-
-    The backend server will start at http://localhost:8080.
-
-Frontend (Angular)
-
-    Navigate to the frontend directory:
+    Clone the Repository:
 
     bash
 
-cd frontend
+git clone <repository_url>
+cd angular-frontend
 
-Install dependencies:
+Install Dependencies:
 
 bash
 
 npm install
 
-Start the Angular development server:
+Run the Application:
 
 bash
 
-    npm start
+    ng serve
 
-    The frontend server will start at http://localhost:4200.
+    Navigate to http://localhost:4200/ in your browser.
 
-Running Tests
-Backend (Spring Boot)
+How to Run Tests
 
-To run backend tests, use Maven:
-
-bash
-
-./mvnw test
-
-Frontend (Angular)
-
-To run frontend tests, use Angular CLI:
-
-bash
-
-npm test
-
-Contributing
-
-    Fork the repository and clone it locally.
-    Create a new branch for your feature or bug fix:
+    Unit Tests:
 
     bash
 
-git checkout -b feature/new-feature
+    ng test
 
-Make your changes and test thoroughly.
-Commit your changes:
+Project Structure
 
-bash
+sql
 
-git commit -am 'Add new feature'
+angular-frontend/
+├── src/
+│   ├── app/
+│   │   ├── user.ts
+│   │   ├── user-list/
+│   │   │   ├── user-list.component.ts
+│   │   │   ├── user-list.component.html
+│   │   │   └── user-list.component.css
+│   │   ├── user-form/
+│   │   │   ├── user-form.component.ts
+│   │   │   ├── user-form.component.html
+│   │   │   └── user-form.component.css
+│   │   ├── user.service.ts
+│   │   ├── app.component.ts
+│   │   ├── app.component.html
+│   │   └── app.module.ts
+│   ├── assets/
+│   ├── environments/
+│   ├── index.html
+│   └── ...
+├── node_modules/
+├── angular.json
+├── package.json
+└── README.md
 
-Push to the branch:
+Additional Notes
 
-bash
-
-    git push origin feature/new-feature
-
-    Submit a pull request.
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-perl
-
-
-#### 3. Save and Exit
-
-Save your changes to the `README.md` file and exit the text editor.
-
-#### 4. Commit and Push to GitHub
-
-After saving your `README.md` file, commit it to your local repository and push it to your GitHub repository:
-
-```bash
-git add README.md
-git commit -m "Add README.md with setup instructions"
-git push origin master
+    Ensure the backend API endpoints are correctly configured in user.service.ts.
+    Modify environment variables in environments/environment.ts for different environments.
