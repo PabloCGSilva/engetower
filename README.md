@@ -1,5 +1,3 @@
-Here's an improved version of your README:
-
 **Engetower Application**
 
 Engetower is a user management application built with Angular for the frontend and Java Spring Boot with an in-memory H2 database for the backend.
