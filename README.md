@@ -1,104 +1,104 @@
-Engetower Application
+Here's an improved version of your README:
 
-This project consists of a frontend application built with Angular and a backend API developed using Java Spring Boot with an H2 in-memory database.
-Stack Used
+**Engetower Application**
 
-    Frontend: Angular 18.0.5
-    Backend: Java Spring Boot
-    Database: H2 (in-memory)
+Engetower is a user management application built with Angular for the frontend and Java Spring Boot with an in-memory H2 database for the backend.
 
-Functionality
+**Technologies**
 
-The application allows users to manage a list of users, including adding new users, listing all users, and deleting users.
-Frontend (Angular)
+* Frontend: Angular 18.0.5
+* Backend: Java Spring Boot
+* Database: H2 (in-memory)
 
-The frontend provides the following functionalities:
+**Features**
 
-    Add User: Enter a name and email for a new user and click "Add User" to add them to the list dynamically.
-    List Users: Displays all users fetched from the backend.
-    Delete User: Allows deletion of a user from the list by clicking the "Delete" button next to each user.
+* Add new users
+* List all users
+* Delete users
 
-Backend (Java Spring Boot)
+**User Interface (Angular)**
 
-The backend API supports the following endpoints:
+The user interface allows you to:
 
-    GET /api/users: Retrieves a list of all users.
-    POST /api/users: Adds a new user to the database.
-    DELETE /api/users/{id}: Deletes the user with the specified ID from the database.
+* **Add User:** Enter a name and email for a new user and click "Add User" to add them to the list.
+* **List Users:** View a list of all users retrieved from the backend.
+* **Delete User:** Delete a user by clicking the "Delete" button next to their name.
 
-How to Run
-Prerequisites
+**API (Java Spring Boot)**
 
-    Node.js and npm installed
-    Java 11 or higher installed
-    Maven installed
+The backend API provides these endpoints:
 
-Frontend (Angular)
+* `GET /api/users`: Retrieves a list of all users.
+* `POST /api/users`: Adds a new user to the database.
+* `DELETE /api/users/{id}`: Deletes the user with the specified ID from the database.
 
-    Navigate to the frontend directory:
+**Getting Started**
 
-    bash
+**Prerequisites:**
 
-cd angular-frontend
+* Node.js and npm installed
+* Java 11 or higher installed
+* Maven installed
 
-Install dependencies:
+**Running the Application**
 
-bash
+1. **Clone the repository** (if not already done)
+2. **Navigate to the project directory**
+3. **Run the backend:**
 
-npm install
+   ```bash
+   ./mvnw spring-boot:run
+   ```
 
-Run the frontend:
+4. **In a separate terminal, navigate to the frontend directory:**
 
-bash
+   ```bash
+   cd angular-frontend
+   ```
 
-    ng serve
+5. **Install frontend dependencies:**
 
-    Access the application:
-    Open a browser and navigate to http://localhost:4200.
+   ```bash
+   npm install
+   ```
 
-Backend (Java Spring Boot)
+6. **Run the frontend:**
 
-    Run the backend:
+   ```bash
+   ng serve
+   ```
 
-    bash
+**Accessing the Application**
 
-    ./mvnw spring-boot:run
+* **Frontend:** http://localhost:4200
+* **Backend API:** http://localhost:8080/api/users
 
-    This command will compile the backend and start the Spring Boot application.
+**Running Tests**
 
-    Access the API:
-        The API endpoints are accessible at http://localhost:8080/api/users.
+**Frontend Tests (Angular):**
 
-Running Tests
-Frontend Tests (Angular)
+```bash
+ng test
+```
 
-    Run unit tests for the frontend:
+**Backend Tests (Java Spring Boot):**
 
-    bash
+```bash
+./mvnw test
+```
 
-    ng test
+**Running a Specific Test:**
 
-Backend Tests (Java Spring Boot)
+To run a specific test class (e.g., `UserControllerTest`), use:
 
-    Run tests for the backend using Maven:
+```bash
+./mvnw test -Dtest=com.raposo.engetower.UserControllerTest
+```
 
-    bash
+**Ignoring "No Tests" Error:**
 
-    ./mvnw test
+If you encounter an error about no tests being found, you can ignore it with the following command:
 
-Running Tests
-
-To run the UserControllerTest directly, use the following command:
-
-    bash
-
-    ./mvnw test -Dtest=com.raposo.engetower.UserControllerTest
-
-Ignoring No Tests Error
-
-If you encounter an error about no tests being executed, you can add the -DfailIfNoTests=false flag to ignore it:
-
-    bash
-
-    ./mvnw test -Dtest=com.raposo.engetower.UserControllerTest -DfailIfNoTests=false
-
+```bash
+./mvnw test -Dtest=com.raposo.engetower.UserControllerTest -DfailIfNoTests=false
+```
